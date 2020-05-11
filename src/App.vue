@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Rhymesaurus: The Rhyming Thesaurus</h1>
     <router-link to="/">Rhymesaurus</router-link> |
-    <router-link to="/">CM</router-link>
+    <router-link to="/CM">CM</router-link>
     <router-view/>
   </div>
 </template>

@@ -14,7 +14,7 @@ Vue.use(VueRouter)
   },
 
 {
-    path: '/',
+    path: '/CM',
     name: 'CM',
     component: CM
   }
