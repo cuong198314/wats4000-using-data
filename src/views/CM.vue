@@ -1,7 +1,7 @@
 <template>
-  <div class="rhymesaurus">
+  <div class="CM">
     <form v-on:submit.prevent="findWords">
-      <p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
+      <p>Find adjectives for <input type="text" v-model="noun"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
  
  <ul v-if="results && results.length > 0" class="results">
@@ -29,7 +29,7 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'Rhymesaurus',
+  name: 'CM',
   data () {
     return {
       results: null,
@@ -41,10 +41,10 @@ export default {
 
    methods: {
   findWords: function(){
-    axios.get('https://api.datamuse.com/words', {
+    axios.get('https://api.datamuse.com/words?rel_jjb=car', {
       params: {
         ml: this.phrase,
-        rel_rhy: this.rhyme
+        rel_rhy: this.adjectives
       }
     })
     .then(response => {

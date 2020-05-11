@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Rhymesaurus from '@/views/Rhymesaurus'
-// TODO: Import new component
+import Rhymesaurus from '@/views/Rhymesaurus' 
+import CM from '@/views/CM'
+
 
 Vue.use(VueRouter)
 
@@ -10,8 +11,14 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Rhymesaurus',
     component: Rhymesaurus
+  },
+
+{
+    path: '/',
+    name: 'CM',
+    component: CM
   }
-  // TODO: Add new route definition here
+
 ]
 
 const router = new VueRouter({
